@@ -1,0 +1,552 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  background-color: bisque;
+}
+
+
+/* Navbar Styles */
+.navbar {
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  right: 0;
+}
+
+
+/* Navigation Links */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.navbar-menu li a {
+  color: purple;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  transition: background 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  background-color: #fab1a8;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Toggle button (label for checkbox) */
+.toggle-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.toggle-menu span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+
+/* Style the header */
+.header {
+  grid-area: header;
+  text-align: center;
+  font-size: 35px;
+  margin-top: 30px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'left left middle middle right right'
+    'project project project project project project'
+    'skills-left skills-left skills-left skills-left skills-left skills-left'
+    'contact contact contact contact contact contact'
+    'footer footer footer footer footer footer'
+  ;
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+  word-wrap: break-word;
+}
+
+
+.left,
+.middle,
+.right,
+.project .skills-left,
+.contact {
+  padding: 10px;
+  /*height: 300px /* Should be removed. Only for demonstration */
+}
+
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  padding-left: 100px;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+  word-wrap: break-word;
+}
+
+/*Style the home page*/
+#welcome {
+  font-family:'Lucida Calligraphy', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+ color:#822C27;
+  font-size: x-large;
+}
+
+#desc {
+  font-family:'Lucida Calligraphy', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-size:large;
+  color: #6e2c00;
+}
+
+
+/*Style the project description area*/
+.project {
+  grid-area: project;
+  word-wrap: break-word;
+  height: 900px;
+  padding-top: 100px;
+  width:100%;
+}
+
+#project-sec h2,
+.skills-left h2,
+.contact-grid h2 {
+  color: #9A2122;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.project-area {
+  text-align: left;
+  margin: 30px;
+}
+
+.project-area a {
+  color: #E4080A;
+
+}
+
+.project-area p {
+  padding-top: 20px;
+}
+
+#ethodupuzha {
+  margin-bottom: 100px;
+}
+
+/*Style the Skills area*/
+
+
+.skills-left {
+  grid-area: skills-left;
+  height: 700px;
+  padding-top: 100px;
+}
+
+.skills-content {
+  display: flex;
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+
+}
+
+.skills-content ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.skills-content ul li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.skills-content h3 {
+  color: #64200F;
+  font-size: large;
+
+
+} 
+.skills-personal{
+  width:50%;
+}
+.skills-tec {
+  width: 100%;
+}
+
+
+.skills-bar {
+  margin-top: 10px;
+}
+
+.skills-content p {
+  font-weight: bold;
+}
+
+.skills {
+  margin-bottom: 10px;
+}
+
+.html {
+  width: 90%;
+  background-color: #04AA6D;
+}
+
+.css {
+  width: 80%;
+  background-color: #2196F3;
+}
+
+.js {
+  width: 65%;
+  background-color: #f44336;
+}
+
+.php {
+  width: 60%;
+  background-color: #808080;
+}
+
+/*Style the contact page*/
+.contact {
+  grid-area: contact;
+  height: 600px;
+}
+
+.card {
+  width: 70%;
+  /*padding: 30px 90px 90px 90px;*/
+  border: 6px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  position: relative;
+  margin-left: 10%;
+}
+
+.card h3 {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.card .row {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid: auto / auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 10px;
+}
+
+.card .row .col {
+  position: relative;
+  width: 100%;
+  margin: 30px 20px 40px 0;
+  /*transition: 0.5s;*/
+}
+
+.card .row .form-group {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #ffffff;
+}
+
+.card .row .form-group input,
+.card .row .form-group textarea {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  font-size: 2vw;
+  padding: 10px 0 10px 20px;
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+  color: palevioletred;
+  border-radius: 50px;
+}
+
+.card .row .form-group label {
+  line-height: 40px;
+  color: peru;
+  font-size: 2vw;
+  margin: 0 0 0 30px;
+  display: block;
+  pointer-events: none;
+}
+
+#sub-button {
+  padding-top: 10px;
+  margin-left: 300px;
+}
+
+
+.card .row input[type="submit"] {
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin-top: 10px;
+  height: 100%;
+  width: 50%;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  text-transform: uppercase;
+  color: peru;
+  line-height: 40px;
+  font-size: 2vw;
+  font-weight: 700;
+  border-radius: 45px;
+
+}
+
+.card .row input[type="submit"]:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  background-color: #fdebd0;
+  border: 1px solid #fdebd0;
+  margin-right: 30px;
+}
+
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  display: flex;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+
+  background-color: #edbb99;
+  width:100%;
+  border:1px solid #edbb99;
+  }
+
+.allright {
+  font-size: smaller;
+  width:50%;
+   text-align: right;
+
+}
+
+/*Style the aside in Home page*/
+#proj-list-aside ul {
+  list-style: none;
+  padding: 10px;
+
+}
+
+#proj-list-aside ul li {
+  padding: 10px;
+}
+
+#proj-list-aside h3 {
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  color: #E4584C;
+  text-decoration: underline;
+}
+
+  
+@media only screen and (max-width: 1100px) {
+  
+  #sub-button {
+    padding-top: 10px;
+    margin-left: 0px;
+    font-size: 3vw;
+  }
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: calc(0.7rem + 0.6vw);
+  }
+  .middle{
+    width:100dvw;
+
+  }
+  #welcome {
+    font-weight: bolder;
+   color:#822C27;
+    font-size: larger;
+  }
+  
+  #desc {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size:medium;
+    color: #6e2c00;
+  }
+
+  
+  .card {
+    margin-left: 5%;
+    width:70dvw;
+  }
+  .card .row .form-group {
+    max-width: 70dvw;
+
+  }
+  .card .row .form-group label {
+    font-size: 5vw;
+  }
+  .contact-grid h2,
+  #project-sec h2,
+  .skills-left h2 {
+    font-size: 7vw;
+    margin-bottom: 10px;
+    padding: 0;
+    width:70%;
+    
+  }
+
+  .skills-left h3 {
+    font-size: 5vw;
+   margin-left: 5px;
+    
+  }
+  
+.grid-container {
+    grid-template-areas:
+      'header header header header header header'
+      'left left left left left left'
+      'middle middle middle middle middle middle'
+      'right right right right right right'
+      'project project project project project project'
+      'skills-left skills-left skills-left skills-left skills-left skills-left'
+      'contact contact contact contact contact contact'
+      'footer footer footer footer footer footer';
+  }
+
+  .toggle-menu {
+    display: flex;
+  }
+
+  /* Hide menu links initially on small screens */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 3px;
+    background-color: aliceblue;
+  }
+
+  .navbar-menu li {
+    text-align: center;
+    border-top: 1px solid aliceblue;
+  }
+
+  /* Show the menu when checkbox is checked */
+  #menu-toggle:checked+.navbar-menu {
+    display: flex;
+  }
+
+  .skills-content {
+    display: block;
+  }
+
+  #sub-button {
+    padding-top: 10px;
+    margin-left: 0px;
+  }
+
+  .card .row input[type="submit"] {
+    font-size: 5vw;
+    line-height: 20px;
+    width:40%;
+  }
+  
+  .skills-tec {
+    margin-top: 20px;
+  }
+  .skills-personal {
+    width: 100%;
+}
+.project-area p {
+  width:80dvw;
+}
+}
+@media only screen and (max-width: 300px) {
+
+  /* Style the middle column */
+  .middle {
+    
+    word-wrap: break-word;
+    width:100dvw;
+  }
+  
+  .left{
+    padding-left: 20px;
+  }
+  #proj-list-aside h3 {
+    text-align: left;
+    padding-left: 20px;
+    font-weight: bold;
+  }
+  .footer{
+    color: #64200F;
+    left:0;
+  }
+  
+  .card .row .col {
+    margin: 10px 20px 10px 0;
+    width:100dvw;
+  }
+  .card .row .form-group label {
+    line-height: 20px;
+  }
+  .skills-personal{
+  width:100dvw;
+  word-wrap: normal;
+}
+
+.skills-tec {
+  width: 100%;
+}
+.skills-content {
+  margin-left: 5px;
+}
+
+.skills-content nav {
+  margin: 20px 20px 20px 0;
+  
+}
+
+
+ }
